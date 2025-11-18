@@ -9,7 +9,7 @@ This repository contains my implementations and solutions for the Data Mining co
 - [`Linear Regression`](supervised/Linear-regression.ipynb)
   - L2 Regularized Linear Regression
   - Cross-Validation for λ selection
-- [`Linear Regression with Cross Validation`](supervised/Linear-regression-withcross-validation.ipynb)
+- [`Linear Regression with Cross Validation`](supervised/Linear-regression-with-cross-validation.ipynb)
   - Applying 10-fold cross-validation to select λ
 - [`K-Nearest Neighbors (KNN)`](supervised/KNN.ipynb)
   - KNN classifier implementation and evaluation
