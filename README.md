@@ -13,6 +13,9 @@ This repository contains my implementations and solutions for the Data Mining co
   - Applying 10-fold cross-validation to select λ
 - [`K-Nearest Neighbors (KNN)`](supervised/KNN.ipynb)
   - KNN classifier implementation and evaluation
+- [`K-Means`](unsupervised/K-Means.ipynb)
+  - K-Means clustering implementation and evaluation 
+
 
 ---
 
@@ -69,6 +72,48 @@ This assignment involves implementing a **KNN classifier** to classify emails as
 
 ---
 
+## K-Means Clustering
+
+This assignment implements **K-Means clustering** to segment and recolor an image based on RGB pixel similarity.
+
+### Objectives
+1. Load and preprocess the image by normalizing RGB values to \([0,1]\).
+2. Implement K-Means with Euclidean distance.
+3. Run the algorithm for `k = 2, 3, 6, 10` using the provided initial centroids.
+4. Iterate until convergence or a maximum of 50 iterations.
+5. Compute and report the final **Sum of Squared Errors (SSE)** for each k.
+6. Recolor each cluster using the specified 10-color scheme.
+
+### Method Overview
+- Converted the image from shape `(244, 198, 3)` into a 2D array of pixels.
+- Normalized all RGB channels by dividing by 255.
+- Assigned pixels to the nearest centroid using Euclidean distance.
+- Updated centroids as the mean RGB values of their assigned pixels.
+- Stopped early when centroid movement was below a small threshold.
+- Recolored each cluster using the assignment:  
+  - Cluster 1 → SpringGreen  
+  - Cluster 2 → DeepSkyBlue  
+  - Cluster 3 → Yellow  
+  - Cluster 4 → Red  
+  - Cluster 5 → Black  
+  - Cluster 6 → DarkGray  
+  - Cluster 7 → DarkOrange  
+  - Cluster 8 → Purple  
+  - Cluster 9 → Pink  
+  - Cluster 10 → White  
+
+### Key Results
+- Final SSE values were obtained for each k (`k = 2, 3, 6, 10`).
+- Recolored output images were generated for each k using the provided palette.
+- Larger k reduced SSE and produced finer segmentation of image regions.
+- Most runs converged before reaching 50 iterations.
+
+### Deliverables
+- Program code implementing K-Means with the given initial centroids.
+- Final SSE values for each k.
+- Recolored images for `k = 2, 3, 6, 10`.
+
+---
 ## Usage
 
 Clone the repository and run the notebook files:
